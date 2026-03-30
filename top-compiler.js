@@ -7,6 +7,7 @@ const STATE_FILE = './state.json';
 const DIFF_FILE = './diff_report.md';
 const COMPILED_DIR = './compiled';
 const CACHE_DIR = './lessons_cache';
+const SEPARATE_SECTIONS = true;
 
 const ALLOWED_COURSES = [
     'foundations',
@@ -197,7 +198,7 @@ async function run() {
             await fs.writeFile(cacheFilePath, lessonCompiled);
         }
 
-        const compileKey = `${lesson.course}`;
+        const compileKey = SEPARATE_SECTIONS ? `${lesson.course}-${lesson.module}` : `${lesson.course}`;
         if (!compiledContent[compileKey]) compiledContent[compileKey] = '';
         compiledContent[compileKey] += lessonCompiled;
 
