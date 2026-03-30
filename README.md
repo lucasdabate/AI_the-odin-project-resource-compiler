@@ -29,3 +29,6 @@ Regardless of which one you choose, the script will store cached versions of ind
 You can feed these files to external tools. A good example is creating a studying companion using LLMs and RAG. Because LLMs are trained on general knowledge, it doesn't always know what code examples from the web are outdated, low quality, or wrong. Feeding it curated content and asking it to prioritize that is likely to result in higher quality responses.
 
 These files also make it possible for you to ask an LLM a question that the course material has a specific answer for and have it give that answer to you, rather than a generic one that might differ vastly form what you've learnt to be a good answer.
+
+## Limitations
+The script ignores video sources.
